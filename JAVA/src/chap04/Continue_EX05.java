@@ -1,0 +1,98 @@
+package chap04;
+public class Continue_EX05 {
+	public static void main(String[] args) {
+		
+		// 1. 단일 loop에서 continue
+		
+		for (int i = 0; i < 10; i++) {
+			continue;
+			// System.out.println("출력 구문 오류"); 		// continue는 조건 없이 하위에 실행문을 사용하면 오류가 발생
+		}
+		System.out.println();
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.print(i + " ");
+			continue;
+		}
+		System.out.println();
+		System.out.println("===================");
+		
+		// 2. 조건을 사용해서 continue 처리
+		
+		for (int i = 0; i < 10; i++) {
+			if (i == 5) {
+				continue;
+			}
+			System.out.print(i + " ");
+			
+		}
+		System.out.println();
+		System.out.println("===================");
+		
+		// 3. 조건을 사용해서 break 처리
+		
+		for (int i = 0; i < 10; i++) {
+			if (i == 5) {
+				break;
+			}
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		System.out.println("====================");
+		
+		// 4. 다중 loop문에서 continue 사용
+		 for (int i = 0; i < 5; i++) {
+	         for (int j = 0; j < 5; j++) {
+	            if (j == 3) {
+	               continue;
+	            }
+	            System.out.println(i + ", " + j);
+	         } 
+	     }
+		 System.out.println("====================");
+		 
+		// 5. 다중 loop문에서 break 사용
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+			    if (j == 3) {
+			        break;
+			    }
+			    System.out.println(i + ", " + j);
+			} 
+		}
+		System.out.println("====================");
+		
+		// 6. continue에서 라벨 사용
+		
+POS2:	for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if (j ==3) {
+					continue POS2;
+				}
+				System.out.println(i + ", " + j);
+			}
+		}
+		System.out.println("====================");
+
+		// 7. break에서 라벨 사용
+POS3:	for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if (j ==3) {
+					break POS3;
+				}
+				System.out.println(i + ", " + j);
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
