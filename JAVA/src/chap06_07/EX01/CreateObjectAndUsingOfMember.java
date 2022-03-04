@@ -15,7 +15,7 @@ class A {										// 외부 클래스
 	}
 }
 
-class B {									// 외부 클래스
+class B {										// 외부 클래스
 	
 	String name = "홍길동";
 	int age = 24;
