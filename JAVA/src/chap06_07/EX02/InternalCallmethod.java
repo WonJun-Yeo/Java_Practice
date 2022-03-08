@@ -2,11 +2,11 @@ package chap06_07.EX02;
 
 // 기본타입의 메소드
 
-public class InternalCallMethod {
+public class InternalCallmethod {
 	public static void main(String[] args) {
 		// 같은 클래스 내의 메소드 호출 : static 키워드가 없는 method 출력 시에는 객체화(인스턴트화)가 필수이다.
 		
-		InternalCallMethod aaa = new InternalCallMethod();
+		InternalCallmethod aaa = new InternalCallmethod();
 		
 		aaa.print();								// aaa 객체의 print() 메소드 호출
 		System.out.println();
