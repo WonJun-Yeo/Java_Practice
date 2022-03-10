@@ -8,7 +8,7 @@ public class Quiz {
 		// 임의의 운동의 이름을 넣고 해당 운동의 구성원 (명수) 를 넣어서 출력하는 프로그램 작성	
 		
 		Scanner sc = new Scanner(System.in);
-POS:	while(true) {
+		while(true) {
 			
 			System.out.println("운동명과 인원수를 번갈아 작성해주세요");
 			
@@ -16,8 +16,8 @@ POS:	while(true) {
 			int sum = 0;
 			double avg = 0.0;
 			
-			if (input == "그만") {
-				break POS;
+			if (input.equals("그만")) {
+				break;
 			} else {
 				String[] array = input.split(" ");
 				
