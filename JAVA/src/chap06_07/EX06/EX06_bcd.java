@@ -1,7 +1,5 @@
 package chap06_07.EX06;
 
-import chap06_07.EX05.External_Abc;
-
 public class EX06_bcd {				// 부모클래스
 
 	// 필드
