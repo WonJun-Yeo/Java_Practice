@@ -24,6 +24,7 @@ class BBBB extends AAAA {
 	}
 	
 	BBBB (int b) {
+		// super(); 가 생략되어 있다.
 		System.out.println("BBBB 매개변수 정수 1개 생성자 " + b);
 	}
 }
@@ -45,6 +46,12 @@ public class SuperMethod_02 {
 		// 2. 자식 클래스 객체 생성
 		
 		BBBB bbbb1 = new BBBB();
+		
+		System.out.println("====================");
+		
+		// 3. 자식 클래스 객체 생성 (매개변수 1개인 생성자 호출)
+		
+		BBBB bbbb2 = new BBBB(3);
 
 	}
 
