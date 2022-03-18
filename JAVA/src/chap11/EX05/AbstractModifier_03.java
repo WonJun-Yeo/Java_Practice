@@ -3,7 +3,7 @@ package chap11.EX05;
 // 추상클래스를 사용해서 기능 구현하는 경우
 
 abstract class Animal {
-	abstract void cry();
+	abstract void cry();							// 추상메소드 : 구현부가 없는 메소드
 }
 
 class Cat extends Animal {

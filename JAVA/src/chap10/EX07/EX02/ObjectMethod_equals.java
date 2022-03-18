@@ -33,8 +33,6 @@ class B {
 			return false;
 		}
 	}
-	
-	
 }
 
 
