@@ -25,6 +25,14 @@ public class EX {
 		ss.flash();
 		
 		
+		int num = 15;
+		System.out.println(num);
+		System.out.println(num++);
+		System.out.println(num);
+		System.out.println(num--);
+		
+		
+		
 	}
 
 }
