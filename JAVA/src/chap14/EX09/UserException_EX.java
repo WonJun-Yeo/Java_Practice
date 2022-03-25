@@ -1,6 +1,6 @@
 package chap14.EX09;
 
-class seasonException extends Exception {
+class seasonException extends Exception {									// 일반예외 (checked exception)
 	public seasonException() {
 		super();												
 	}
@@ -52,11 +52,13 @@ class userIDException extends Exception {
 
 
 class A {
-	String season;								// 봄, 여름, 가을, 겨울 이외의 값은 예외 발생
-	String week;								// 월, 화, 수, 목, 금, 토, 일 이외의 값은 예외 발생
-	int scoreKor;								// 0~100 이외의 값은 예외 발생
-	int scoreEng;								// 0~100 이외의 값은 예외 발생
-	String userID;								// 12~20자 이외의 길이 값은 예외 발생
+	// private를 붙여줘야하는 이유 : 안붙였을 경우 객체를 만들어서 값을 할당할 수 있기 때문, 캡슐화
+	// 생성자, setter를 통해 필드값을 초기화 : 제어 후, 필드값을 할당할 수 있다.
+	private String season;								// 봄, 여름, 가을, 겨울 이외의 값은 예외 발생
+	private String week;								// 월, 화, 수, 목, 금, 토, 일 이외의 값은 예외 발생
+	private int scoreKor;								// 0~100 이외의 값은 예외 발생
+	private int scoreEng;								// 0~100 이외의 값은 예외 발생
+	private String userID;								// 12~20자 이외의 길이 값은 예외 발생
 	
 	public void checkSeason (String season) throws seasonException {
 		if (season.equals("봄") || season.equals("여름") || season.equals("가을") || season.equals("겨울")) {
