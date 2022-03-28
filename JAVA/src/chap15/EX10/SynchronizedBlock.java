@@ -2,14 +2,22 @@ package chap15.EX10;
 
 /* 블락동기화 : 메소드 내부의 일부분만 동기화
  * 구문 : synchronized (임의의 객체){}
- * 임의의 객체의 default 값은 this 이며 자신의 객체를 뜻한다.
+ * 임의의 객체의 default 값은 this 이다.
+ * this 자신의 객체를 뜻하며, 동기화 블록에 접근하는 Key이다.
+ * 모든 스레드는 Key를 가져야 동기화 블럭을 접근할 수 있다.
+ * 임의의 객체를 Key로 사용할 수 있다.
  */
+
+
+class A{}
+class B{}
+class C{}
 
 class MyData {											// 스레드들이 공유하는 객체 필드 생성
 	int data = 3;
 	
-	public synchronized void plusData () {
-		synchronized (this) {
+	public void plusData () {
+		synchronized (this) {							// 블락 동기화
 			int myData = data;
 			try {
 				Thread.sleep(2000);
