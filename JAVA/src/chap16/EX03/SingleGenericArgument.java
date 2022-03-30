@@ -10,7 +10,7 @@ package chap16.EX03;
  * Generic 타입 변수에는 기본타입의 데이터가 들어 갈 수 없다.
  * 
  * wrapper 클래스 : 기본 타입을 객체화 시켜 놓은 클래스
- * int (기본타입) : Integer (객체), boolean : Boolean, char : Charter, double : Double, float : Float
+ * int (기본타입) : Integer (객체), boolean : Boolean, char : Charter, double : Double, float : Float, byte : Byte, short : Short, long : Long
  * 
  */
 
