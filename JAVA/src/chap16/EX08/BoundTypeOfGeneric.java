@@ -7,7 +7,7 @@ class C extends B {}
 
 // Generic 클래스
 // Generic 타입에 들어오는 객체를 제한 (extends)
-class D <T> extends B{						// T의 타입은 class B와 C만 올 수 있다.
+class D <T extends B> {						// T의 타입은 class B와 C만 올 수 있다.
 	private T t;
 
 	public T get() {
@@ -43,7 +43,7 @@ public class BoundTypeOfGeneric {
 		//d3.set(new B());					// 불가능
 		d3.set(new C());
 		
-		// d4.set(new A());
+		//d4.set(new A());
 		
 		
 	}

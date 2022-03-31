@@ -80,8 +80,9 @@ class Pencil {
 }
 
 // Generic 클래스
-
-class List <T extends Fruit> {
+// DTO(Data Transfer Object)또는 VO(Value Object) : 데이터를 받아서 전송하는 중간자 역할을 함
+// DTO : getter, setter 모두 있음, VO : getter 만 있음
+class List <T extends Fruit> {							
 	private T fruit;
 
 	public T getFruit() {
