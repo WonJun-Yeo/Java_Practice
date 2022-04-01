@@ -47,9 +47,13 @@ class MemberArrayList {												// 객체화 시, arrayList 객체가 생성된다.
 	}
 	
 	public void addMember2(int a, Member member) {					// 매개변수 2개를 받아서 특정 index에 값을 추가(삽입)
-		arrayList.add(a, member);
-		System.out.println("index " + a + "방에 " + member.getMemberName() + "님이 추가되었습니다.");
-		System.out.println(member.getMemberName() + "님의 회원 ID는 " + member.getMemberID() + "입니다.");
+		try {
+			arrayList.add(a, member);
+			System.out.println("index " + a + "방에 " + member.getMemberName() + "님이 추가되었습니다.");
+			System.out.println(member.getMemberName() + "님의 회원 ID는 " + member.getMemberID() + "입니다.");
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println("예외가 발생되었습니다. index를 정확하게 입력하세요");
+		}
 	}
 	
 	public boolean removeMember(int memberId) {						// arrayList에 저장된 memberID 검색한 뒤 해당 객체를 삭제
@@ -57,9 +61,9 @@ class MemberArrayList {												// 객체화 시, arrayList 객체가 생성된다.
 			if (arrayList.get(i).getMemberID() == memberId) {
 				arrayList.remove(i);
 				System.out.println("회원번호 " + memberId + "님이 삭제되었습니다.");
+				i--;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -68,6 +72,10 @@ class MemberArrayList {												// 객체화 시, arrayList 객체가 생성된다.
 		for (int i = 0; i < arrayList.size(); i++) {
 			System.out.println(arrayList.get(i));
 		}
+	}
+	
+	public void showSize() {
+		arrayList.size();
 	}
 	
 }
@@ -91,6 +99,11 @@ public class EX_MeberArrayList {
 		memberArrayList.addMember(memberPark);
 		memberArrayList.addMember(memberHong);
 		
+		// arrayList의 방 크기
+		memberArrayList.showSize();
+		
+		System.out.println("=================================");
+		
 		// 특정 index 방에 사용자 추가
 		memberArrayList.addMember2(3, memberHong);
 		
@@ -102,14 +115,11 @@ public class EX_MeberArrayList {
 		System.out.println("=================================");
 		
 		// 특정 ID를 가진 사용자 제거
-		memberArrayList.removeMember(1003);
+		memberArrayList.removeMember(1004);
 
 		System.out.println("=================================");
 		
 		// 모든 사용자 정보 출력
 		memberArrayList.showAllMember();
-		
 	}
-	
-
 }
