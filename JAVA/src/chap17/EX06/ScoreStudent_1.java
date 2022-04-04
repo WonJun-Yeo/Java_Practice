@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 
 class Student{
-	int score; 
+	int score; 																				// 필드값할당 법 : 1.객체 생성후 직접할당, 2. private 접근제어자일 경우, 생성자 or getter&setter
 	
 	Student(int score){
 		this.score = score;
@@ -36,7 +36,6 @@ public class ScoreStudent_1 {
             System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
             System.out.println("----------------------------------------------------");
             System.out.println("선택> ");
-            
             int selectNo = scanner.nextInt();
 
             if(selectNo == 1) {
@@ -47,42 +46,54 @@ public class ScoreStudent_1 {
                 System.out.println("입력완료");
                 
             } else if(selectNo == 2) {
-            	for (int i = 0; i < studentNum; i++) {
-            		System.out.println((i+1) + "번 학생의 점수를 입력하세요 : ");
-            		
-            		int score = scanner.nextInt();
-            		
-            		Student student = new Student(score);
-            		
-            		arr.add(student);
-            		System.out.println((i+1) + "번 학생의 점수는 " + student.score + "입니다.");
+            	if(studentNum == 0) {
+            		System.out.println("학생 수를 먼저 입력해주세요.");
+            	} else {
+            		for (int i = 0; i < studentNum; i++) {
+                		System.out.println((i+1) + "번 학생의 점수를 입력하세요 : ");
+                		
+                		int score = scanner.nextInt();
+                		
+                		Student student = new Student(score);
+                		
+                		arr.add(student);
+                		System.out.println((i+1) + "번 학생의 점수는 " + student.score + "입니다.");
+                	}
+                	System.out.println("모든학생들의 점수를 입력하였습니다.");
             	}
-            	System.out.println("모든학생들의 점수를 입력하였습니다.");
             } else if(selectNo == 3) {
-            	System.out.println("모든 학생들의 점수입니다.");
-            	for (int i = 0; i < arr.size(); i++) {
-            		System.out.println(arr.get(i).score);
+            	if(studentNum == 0) {
+            		System.out.println("학생 수를 먼저 입력해주세요.");
+            	} else {
+            		System.out.println("모든 학생들의 점수입니다.");
+                	for (int i = 0; i < arr.size(); i++) {
+                		System.out.println(arr.get(i).score);
+                	}
             	}
-             
             } else if(selectNo == 4) {
-            	//코드작성
-            	int maxScore = 0;
-            	int sum = 0;
             	
-            	for (int i = 0; i < arr.size(); i++) {
-            		if (arr.get(i).score > maxScore) {
-            			maxScore = arr.get(i).score;
-            		}
+            	if(studentNum == 0) {
+            		System.out.println("학생 수를 먼저 입력해주세요.");
+            	} else {
+            		//코드작성
+                	int maxScore = 0;
+                	int sum = 0;
+                	// 최대값
+                	for (int i = 0; i < arr.size(); i++) {
+                		if (arr.get(i).score > maxScore) {
+                			maxScore = arr.get(i).score;
+                		}
+                	}
+                	// 합계
+                	for (int i = 0; i < arr.size(); i++) {
+                		sum += arr.get(i).score;
+                	}
+                	System.out.println("최고점수 : " + maxScore);
+                	System.out.println("평균점수 : " + (float) sum / studentNum);
             	}
-            	
-            	for (int i = 0; i < arr.size(); i++) {
-            		sum += arr.get(i).score;
-            	}
-            	System.out.println("최고점수 : " + maxScore);
-            	System.out.println("평균점수 : " + (float) sum / studentNum);
          
             } else if(selectNo == 5) {
-            	run = false;
+            	run = false;																			// while문 조건인 run을 false로 재할당해 while 문 빠져나오기
             } else {
             	System.out.println("1 ~ 5 사이값을 입력해주세요");
             }
