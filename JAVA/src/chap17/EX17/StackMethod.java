@@ -3,7 +3,8 @@ package chap17.EX17;
 import java.util.Stack;
 
 /* Stack 자료구조 : LIFO (Last In First Out) : 제일 마지막에 저장하는 값이 제일 처음 나옴
- * 
+ * List<E> > Vector<E> > Stack<E>
+ * index는 위에서 1부터 할당
  */
 
 

@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /* Queue : FIFO (First In First  Out) : 처음 들어간 값이 처음 나온다.
+ * Collection<E> > Queue<E> > LinkedList <E>
+ * LinkedList는 List와 Queue 인터페이스를 구현한 클래스
  */
 
 
