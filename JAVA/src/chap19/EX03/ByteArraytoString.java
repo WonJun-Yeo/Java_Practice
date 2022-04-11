@@ -23,8 +23,8 @@ public class ByteArraytoString {
 		System.out.println("========================================");
 		
 		// 3. new String() : byte 배열을 String으로 변환
-		String str1 = new String(array1);
-		String str2 = new String(array2, Charset.defaultCharset());
+		String str1 = new String(array1);								// defaultCharset() 은 생략 가능
+		String str2 = new String(array2, Charset.defaultCharset());		// defaultCharset 은 MS949
 		String str3 = new String(array3, Charset.forName("MS949"));		// 가져올대 인코딩 타입이 일치 해야한다.
 		String str4 = new String(array4, Charset.forName("UTF-8"));		// 가져올대 인코딩 타입이 일치 해야한다.
 		

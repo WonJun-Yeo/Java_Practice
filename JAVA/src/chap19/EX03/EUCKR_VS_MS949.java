@@ -8,22 +8,27 @@ import java.io.UnsupportedEncodingException;
  * 약 11,000 자 중 2,200자 정도만 표기 가능
  * 8,000자는 표시 안됨
  * 영문 : 1byte, 한글 2byte
+ * 영문은 UTF-8 로 처리된다.
  * 웹페이지로 출력할 때 
  */
 
-/* MS-949
+/* MS-949 (ANSI)
  * Microsoft 사에서 개발한 한글 표기 방식
  * windows의 기본 타입
  * 11,000 모두를 표기할 수 있다.
  * 영문 : 1byte, 한글 2byte
+ * 영문은 UTF-8 로 처리된다.
  */
 
 /* UTF-8
- * windows 를 제외한 모든 서버의 기본 타입
+ * windows 를 제외한 모든 서버의 인코딩 기본 타입
  * 영문 : 1byte, 한글 3byte <가변길이>
+ * 영문은 UTF-8 로 처리된다.
  */
 
 /* UTF-16
+ * BOM(모든나라의 식별코드) 2byte 가 포함되어 있다. 
+ * 모든 나라의 언어를 처리할 수 있다.
  * 영문 : 2byte, 한글 2byte <고정길이>
  */
 
