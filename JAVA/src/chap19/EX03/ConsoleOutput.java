@@ -1,4 +1,4 @@
-package sec01_basicsyntax.EX03_ConsoleOutput;
+package chap19.EX03;
 
 public class ConsoleOutput {
 

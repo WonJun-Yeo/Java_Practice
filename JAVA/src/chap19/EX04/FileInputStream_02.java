@@ -73,8 +73,8 @@ public class FileInputStream_02 {
 		int count1;
 		
 		while((count1 = is2.read(byteArray1)) != -1) {			//  
-			/* read() :  1byte씩 읽어온다.
-			 * read(배열변수) : 배열변수의 length 만큼 byte를 읽어온다.
+			/* read() :  1byte씩 읽어온다. 느리다.
+			 * read(배열변수) : 배열변수의 length 만큼 byte를 읽어와 배열에 저장한다. 빠르다.
 			 * 남은 갯수가 배열변수의 length 만큼 되지 않으면 남은만큼 byte를 읽어온다.
 			 * 남은 갯수가 없으면 -1이 되면서 while문을 빠져나온다.
 			 */
