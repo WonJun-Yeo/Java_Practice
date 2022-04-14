@@ -21,7 +21,7 @@ public class OutputStreamWriter_01 {
 		File osw1 = new File("JAVA\\src\\chap19\\EX08\\osw1.txt");
 		try (Writer writer =  new FileWriter(osw1);){
 			writer.write("OutputStreamWriter1 예제 파일입니다.\n".toCharArray());					// String을 char[] 배열에 저장
-			writer.write("한글과 영문이 모두 포함되어 있습니다.");										// String
+			writer.write("한글과 영문이 모두 포함되어 있습니다.");											// String
 			writer.write('\n');																	// char
 			writer.write("Good Bye!!!\n\n");
 			writer.flush();
@@ -29,6 +29,8 @@ public class OutputStreamWriter_01 {
 		
 		
 		// OutputStreamWriter를 사용해서 MS949 => UTF-8 로 파일 쓰기
+		// 폴더의 defaultCharset이 MS949인데 UTF-8로 쓴경우 파일이 깨진다.
+		// 외부로 보내면 이상없다.
 		File osw2 = new File("JAVA\\src\\chap19\\EX08\\osw2.txt");
 		
 		try (OutputStream os =  new FileOutputStream(osw2);

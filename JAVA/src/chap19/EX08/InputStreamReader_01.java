@@ -12,6 +12,8 @@ import java.io.Reader;
  * 		인코딩을 지정할 수 있다.
  * 		byte 포멧은 인코딩을 잘 지정해주어야 한다.
  * 		char 포멧으로 바꾸면 인코딩 타입을 신경쓸 필요가없다.
+ * 		현재 defaultCharset이 MS949이지만 외부 파일이 UTF-8을 읽어올 경우 경우 사용
+ * 		네트워크에서 전송되는 Stream이 UTF-8, MS949 byte => char단위 변환
  */
 
 
