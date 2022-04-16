@@ -99,7 +99,13 @@ class Employee implements Comparable<Employee> { // 사원정보를 담은 클래스
 	}
 }
 
-
+/* Set
+ * 		Wrapper class들은 equals()와 hashCode()가 재정의 되어있어 중복된 값을 넣을 수 없다.
+ * 		다른 객체의 경우 equals()와 hashCode()를 재정의 해주어야 중복값이 저장되지 않는다.
+ * TreeSet<DataType>
+ * 		Wrapper class들은 Comparable 인터페이스의 compareTo와 Comparator 인터페이스의 compare() 구현 되어있어 정렬되어 저장
+ * 		다른 객체의 경우 Comparable 인터페이스의 compareTo또는 Comparator 인터페이스의 compare() 를 구현하여야 한다.
+ */
 
 
 
